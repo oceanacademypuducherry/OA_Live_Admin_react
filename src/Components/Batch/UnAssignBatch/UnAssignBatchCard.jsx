@@ -16,7 +16,7 @@ export default function UnAssignBatchCard() {
         </div>
         <div className="course-tt">
           <div className="time">6-7</div>
-          <div className="type">Week-End</div>
+          <div className="type">Week-En</div>
         </div>
       </div>
     </div>

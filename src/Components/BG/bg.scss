@@ -1,0 +1,23 @@
+@import "../common/colors.scss";
+.bg {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+  .bg-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $blackOverlay;
+
+    backdrop-filter: blur(50px);
+  }
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}

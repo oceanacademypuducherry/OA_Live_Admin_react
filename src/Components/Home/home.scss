@@ -1,0 +1,15 @@
+@import "../common/colors.scss";
+@import "../common/hw.scss";
+@import "../common/common.scss";
+
+.component-div {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  .t-c {
+    width: 100%;
+    height: calc(100vh - 120px);
+    @include centerAlign;
+  }
+}

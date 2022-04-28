@@ -1,0 +1,45 @@
+@import "../../common/colors.scss";
+@import "../../common/hw.scss";
+@import "../../common/common.scss";
+
+.uab-div {
+  height: 100px;
+  width: 300px;
+  border-radius: $overlayRadius;
+  background: $whiteOverlay;
+  @include rowSpaceCenter;
+  padding: 0 10px;
+  .count-div {
+    height: 85%;
+    width: 25%;
+    background: #0ab3e76d;
+    border-radius: $elementRadius;
+    @include centerAlign;
+    flex-direction: column;
+    .count {
+      font-size: 40px;
+      color: #87a0ae;
+      line-height: 0.8;
+    }
+    span {
+      color: #87a0ae;
+      font-size: 15px;
+    }
+  }
+  .card-content-div {
+    height: 85%;
+    width: 72%;
+    // background-color: yellow;
+    .title-div {
+      @include rowSpaceCenter;
+      .title {
+        font-size: 25px;
+        color: #87a0ae;
+      }
+      .ico {
+        color: rgba(255, 255, 255, 0.171);
+        font-size: 35px;
+      }
+    }
+  }
+}

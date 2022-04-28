@@ -1,0 +1,45 @@
+@import "../common/colors.scss";
+@import "../common/hw.scss";
+@import "../common/common.scss";
+
+.text-box {
+  height: $inputHeight;
+  width: $inputWidth;
+  border-radius: $elementRadius;
+  background: $inputBackground;
+  margin: 10px 0;
+  overflow: hidden;
+  @include centerAlign;
+  position: relative;
+  transition: 0.3s;
+  .inp {
+    height: 100%;
+    width: 95%;
+    border: none;
+    font-size: 18px;
+    color: $inputText;
+    background: transparent;
+    position: absolute;
+  }
+  .inp:focus {
+    outline: none;
+  }
+  .dot {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: $inputBackground;
+    right: -15px;
+
+    transition: 0.1s;
+  }
+}
+.text-box:focus-within {
+  // outline: 5px solid rgba(255, 255, 255, 0.196);
+  .dot {
+    right: 10px;
+
+    background-color: rgba(0, 0, 0, 0.253);
+  }
+}

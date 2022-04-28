@@ -1,0 +1,24 @@
+@import "../common/colors.scss";
+@import "../common/hw.scss";
+@import "../common/common.scss";
+
+.c-btn {
+  user-select: none;
+  width: $inputWidth;
+  height: $inputHeight;
+  border-radius: $elementRadius;
+
+  color: $btnText;
+  margin: 10px 0;
+  background: $btnBg;
+  @include centerAlign;
+  transition: 0.3s;
+  font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    background: $btnBgHover;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

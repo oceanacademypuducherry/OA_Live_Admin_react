@@ -1,0 +1,69 @@
+@import "../common/colors.scss";
+@import "../common/hw.scss";
+@import "../common/common.scss";
+
+.auth-div {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .box {
+    padding: 50px 0px;
+    width: 550px;
+    border-radius: $overlayRadius;
+    backdrop-filter: blur(20px);
+    background: $whiteOverlay;
+    @include centerAlign;
+    flex-direction: column;
+
+    .profile {
+      user-select: none;
+      backdrop-filter: blur(20px);
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 180px;
+      width: 180px;
+      border-radius: 50%;
+      background: $whiteOverlay;
+      @include centerAlign;
+      .img-div {
+        border-radius: inherit;
+        overflow: hidden;
+        height: 90%;
+        width: 90%;
+        cursor: pointer;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .back-btn {
+    position: absolute;
+    @include centerAlign;
+    top: 20px;
+    border-radius: 50%;
+    left: 20px;
+    height: 60px;
+    width: 60px;
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: $whiteOverlay;
+    .ico {
+      color: #02111f;
+      font-size: 30px;
+    }
+    &:hover {
+      background-color: rgba(252, 252, 252, 0.154);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}

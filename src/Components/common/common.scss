@@ -1,0 +1,15 @@
+$elementRadius: 5px;
+$overlayRadius: 10px;
+$appBarHeight: 120px;
+
+@mixin centerAlign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rowSpaceCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

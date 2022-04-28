@@ -1,0 +1,65 @@
+@import "../common/colors.scss";
+@import "../common/hw.scss";
+@import "../common/common.scss";
+.appbar-div {
+  height: $appBarHeight;
+  width: 100%;
+  background: $appBarBg;
+  border-bottom: 2px solid $borderColor;
+  @include rowSpaceCenter;
+  .brand-logo {
+    margin-left: 20px;
+    height: 70%;
+    width: 300px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .admin-profile {
+    height: 100%;
+    width: auto;
+    @include centerAlign;
+    .admin-name {
+      color: white;
+      font-size: 25px;
+      margin-right: 20px;
+    }
+    .logout {
+      cursor: pointer;
+    }
+    .pic-div {
+      cursor: pointer;
+      margin-right: 20px;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      @include centerAlign;
+      background: #039aeba1;
+      transition: 0.1s;
+      &:hover {
+        margin-left: 10px;
+        .pic {
+          height: 65px;
+          width: 65px;
+        }
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+      .pic {
+        transition: 0.1s;
+        border-radius: 50%;
+        height: 70px;
+        width: 70px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

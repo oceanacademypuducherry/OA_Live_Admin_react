@@ -73,7 +73,9 @@ export default function SignUp() {
           onchange={onChangeHandler}
         />
 
-        <CustomButton onClick={signUp}>SignUp</CustomButton>
+        <CustomButton style={{ width: 420 }} onClick={signUp}>
+          SignUp
+        </CustomButton>
       </div>
       <OA />
       <Bg />

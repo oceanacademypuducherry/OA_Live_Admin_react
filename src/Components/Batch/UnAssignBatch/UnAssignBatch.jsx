@@ -4,15 +4,7 @@ import axios from "../../../index";
 
 export default function UnAssignBatch() {
   const token = localStorage.getItem("token");
-  const [purchaseData, setPurchaseData] = useState([
-    {
-      availableTrainer: [],
-      users: "",
-      batchTime: "",
-      batchType: "",
-      course: {},
-    },
-  ]);
+  const [purchaseData, setPurchaseData] = useState(null);
 
   function getPurchaseData() {
     axios
@@ -30,9 +22,10 @@ export default function UnAssignBatch() {
   }, []);
   return (
     <div className="un-assign-batch">
-      {purchaseData.map((item, index) => {
-        return <UnAssignBatchCard key={index} purchaseDataInfo={item} />;
-      })}
+      {purchaseData &&
+        purchaseData.map((item, index) => {
+          return <UnAssignBatchCard key={index} purchaseDataInfo={item} />;
+        })}
     </div>
   );
 }

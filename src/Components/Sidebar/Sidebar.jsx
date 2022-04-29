@@ -15,7 +15,8 @@ export default function Sidebar() {
         tabName={"Un Assign Batch"}
         activeTab={
           (pathName === "/add/to/batch" ||
-            pathName === "/add/to/batch/assign") &&
+            pathName === "/add/to/batch/assign" ||
+            pathName === "/") &&
           "active-tab"
         }
       />
@@ -23,9 +24,7 @@ export default function Sidebar() {
         navigateTo={"/all/batch"}
         icon={<FaBook />}
         tabName={"See All Batches"}
-        activeTab={
-          (pathName === "/all/batch" || pathName === "/") && "active-tab"
-        }
+        activeTab={pathName === "/all/batch" && "active-tab"}
       />
     </div>
   );

@@ -1,0 +1,121 @@
+@import "../../common/common.scss";
+@import "../../common/colors.scss";
+
+.see-all-batch {
+  height: 95%;
+  width: 95%;
+  background: $whiteOverlay;
+  border-radius: $overlayRadius;
+  @include centerAlign;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  row-gap: 10px;
+  overflow: hidden;
+  overflow-y: auto;
+  .batch-card {
+    height: 380px;
+    border-radius: 10px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.298);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    .batch-name {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #95b5d2;
+    }
+    .trainer-info {
+      margin-top: 10px;
+      width: 95%;
+      height: 60px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.037);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .profileImage {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: yellow;
+        margin: 0 10px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .t-about {
+        .name {
+          color: #95b5d2;
+          font-size: 18px;
+        }
+        .email {
+          color: #0c6583;
+        }
+      }
+    }
+    .progress-div {
+      margin-top: 10px;
+      .progres {
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        @include centerAlign;
+        .percent {
+          font-size: 20px;
+          color: #0e85ab;
+        }
+      }
+    }
+    .users-group {
+      width: 95%;
+      height: 50px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .overlap {
+        width: 20px;
+        .user {
+          position: relative;
+          height: 50px;
+          margin-left: -20px;
+          width: 50px;
+          overflow: hidden;
+          border-radius: 50%;
+          border: 2px solid white;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    transition: 0.5s;
+    &:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    &:active {
+      transition: 0.1s;
+      transform: scale(0.95);
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .see-all-batch {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 950px) {
+  .see-all-batch {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

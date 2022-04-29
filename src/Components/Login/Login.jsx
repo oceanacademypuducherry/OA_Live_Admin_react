@@ -38,7 +38,9 @@ export default function Login() {
             setMobileNumber(e.target.value);
           }}
         />
-        <CustomButton onClick={login}>Login</CustomButton>
+        <CustomButton style={{ width: 420 }} onClick={login}>
+          Login
+        </CustomButton>
       </div>
       <OA />
       <Bg />

@@ -1,0 +1,106 @@
+@import "../../common/common.scss";
+@import "../../common/colors.scss";
+
+.assign-batch-div {
+  height: 100%;
+  width: 100%;
+  //   background: yellow;
+  @include rowSpaceCenter;
+  padding: 0 20px;
+  .user-view {
+    height: 95%;
+    width: 30%;
+    min-width: 300px;
+    background: $whiteOverlay;
+    border-radius: $overlayRadius;
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+  .add-batch-info {
+    height: 95%;
+    width: 68%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    //date bar
+    .date-bar {
+      height: 9%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // background-color: rebeccapurple;
+      .date-picker-div {
+        display: flex;
+
+        .info-of-batch {
+          cursor: pointer;
+
+          margin-right: 20px;
+          display: flex;
+          .key {
+            margin-right: 10px;
+            color: #0796c2;
+            font-size: 20px;
+          }
+          .value {
+            position: relative;
+            color: #95b5d2;
+            font-size: 20px;
+            input.dd {
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              user-select: none;
+              background: none;
+              outline: none;
+              border: none;
+              position: absolute;
+              font-size: 20px;
+              color: rgba(255, 255, 255, 0);
+            }
+            input[type="date"]::-webkit-calendar-picker-indicator {
+              background: blueviolet;
+              position: absolute;
+              width: 300px;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+    //trainer picker
+    .trainer-picker {
+      user-select: none;
+      height: 90%;
+      width: 100%;
+      background: $whiteOverlay;
+      border-radius: $overlayRadius;
+      justify-content: flex-start;
+      overflow: hidden;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: start center;
+      overflow-y: auto;
+    }
+    @media only screen and (max-width: 1660px) {
+      .trainer-picker {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media only screen and (max-width: 1235px) {
+      .trainer-picker {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

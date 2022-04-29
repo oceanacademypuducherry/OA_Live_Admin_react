@@ -1,0 +1,106 @@
+@import "../../common/common.scss";
+.trainer-card-div {
+  cursor: pointer;
+  height: 380px;
+  width: 280px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+  .indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    @include centerAlign;
+    background: rgba(0, 0, 0, 0.283);
+    .tic {
+      height: 40%;
+      width: 40%;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.359);
+    }
+  }
+  transition: 0.2s;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.339);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  .divide-trainer-block {
+    height: 50%;
+    width: 100%;
+    margin-bottom: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .trainer-img-div {
+      margin-top: 20px;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.117);
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .divide-trainer-block {
+    .trainer-info {
+      height: 100%;
+      width: 100%;
+      .trainer-data {
+        height: 50%;
+        width: 100%;
+
+        @include centerAlign;
+        flex-direction: column;
+        line-height: 1.2;
+        .t-name {
+          font-size: 25px;
+          color: rgb(7, 166, 239);
+          font-weight: 600;
+        }
+        .t-designation {
+          font-size: 20px;
+          color: #7fb6ce;
+        }
+      }
+      .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .icon-div {
+          height: 60px;
+          width: 60px;
+          background: rgba(255, 255, 255, 0.063);
+          border-radius: 50%;
+          @include centerAlign;
+          font-size: 25px;
+          color: rgb(0, 123, 255);
+        }
+        .icon-div:nth-child(2) {
+          color: rgba(255, 255, 255, 0.985);
+          background: rgb(0, 123, 255);
+        }
+      }
+    }
+  }
+}
+
+.is-select {
+  background-color: rgba(0, 0, 0, 0.471);
+  .indicator {
+    .tic {
+      background: rgb(0, 157, 255);
+    }
+  }
+}

@@ -13,7 +13,11 @@ export default function Sidebar() {
         navigateTo={"/add/to/batch"}
         icon={<FaBook />}
         tabName={"Un Assign Batch"}
-        activeTab={pathName === "/add/to/batch" && "active-tab"}
+        activeTab={
+          (pathName === "/add/to/batch" ||
+            pathName === "/add/to/batch/assign") &&
+          "active-tab"
+        }
       />
       <Tabs
         navigateTo={"/all/batch"}

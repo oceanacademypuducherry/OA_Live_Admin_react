@@ -1,0 +1,20 @@
+.percent {
+  position: relative;
+  svg {
+    position: absolute;
+    transform: rotateZ(-90deg);
+    circle {
+      transition: 1s;
+    }
+  }
+}
+
+.percent:after {
+  height: 140px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(data-pct) "%";
+  color: white;
+}

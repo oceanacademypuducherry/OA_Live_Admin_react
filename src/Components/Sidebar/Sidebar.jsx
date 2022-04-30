@@ -5,10 +5,26 @@ import { FaBook } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
 export default function Sidebar() {
-  const pathName = useLocation().pathname;
-
+  const location = useLocation();
+  let pathName = location.pathname;
+  console.log(location);
   return (
     <div className="sidebar-div">
+      <Tabs
+        navigateTo={"/all/course"}
+        icon={<FaBook />}
+        tabName={"See All Course"}
+        activeTab={pathName === "/all/course" && "active-tab"}
+      />
+      <Tabs
+        navigateTo={"/add/course"}
+        icon={<FaBook />}
+        tabName={"Add Course"}
+        activeTab={
+          (pathName === "/add/course" || pathName.includes("/add/course/")) &&
+          "active-tab"
+        }
+      />
       <Tabs
         navigateTo={"/add/to/batch"}
         icon={<FaBook />}

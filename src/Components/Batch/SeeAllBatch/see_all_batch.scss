@@ -14,6 +14,7 @@
   overflow: hidden;
   overflow-y: auto;
   .batch-card {
+    user-select: none;
     height: 380px;
     border-radius: 10px;
     width: 300px;
@@ -21,16 +22,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     .batch-name {
+      width: 90%;
+      text-align: center;
       margin-top: 20px;
       font-size: 20px;
       color: #95b5d2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .trainer-info {
       margin-top: 10px;
       width: 95%;
-      height: 60px;
+      height: 70px;
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.037);
       display: flex;
@@ -39,8 +45,9 @@
       .profileImage {
         height: 50px;
         width: 50px;
+        min-width: 50px;
         border-radius: 50%;
-        background: yellow;
+        background: rgba(252, 252, 252, 0.377);
         margin: 0 10px;
         overflow: hidden;
         img {
@@ -50,12 +57,21 @@
         }
       }
       .t-about {
+        width: calc(100% - 70px);
+
         .name {
+          // width: calc(100% - 10px);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
           color: #95b5d2;
           font-size: 18px;
         }
         .email {
           color: #0c6583;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }
@@ -76,7 +92,7 @@
     .users-group {
       width: 95%;
       height: 50px;
-      margin-top: 10px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       justify-content: center;

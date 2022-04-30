@@ -2,18 +2,29 @@ import React from "react";
 import "./text_input.scss";
 
 export default function TextInput({
+  textarea,
+  className,
   value,
   onchange,
   placeholder,
   valid,
   type,
   name,
+  readOnly,
 }) {
   return (
-    <div>
-      <div className="text-box">
-        <div className="dot"></div>
+    <div className={`text-box ${className} ${textarea && "inp-textarea"} `}>
+      <div className="dot"></div>
+      {textarea ? (
+        <textarea
+          placeholder={placeholder}
+          name={name}
+          onChange={onchange}
+          value={value}
+        ></textarea>
+      ) : (
         <input
+          readOnly={readOnly}
           className="inp"
           type={type}
           name={name}
@@ -21,7 +32,7 @@ export default function TextInput({
           value={value}
           onChange={onchange}
         />
-      </div>
+      )}
     </div>
   );
 }

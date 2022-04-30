@@ -1,0 +1,125 @@
+.all-course-div {
+  height: 95%;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: none;
+  overflow-y: auto;
+  place-items: start center;
+}
+
+.card-div {
+  cursor: pointer;
+  width: 300px;
+  height: 250px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.064);
+  backdrop-filter: blur(20px);
+  // margin: 10px;
+  transition: 0.1s;
+  .image-div {
+    border-radius: 10px;
+    min-height: 57.142%;
+    height: 57.142%;
+    width: calc(100% - 20px);
+    background: url("https://i.ibb.co/Xttwyfn/Python.png");
+    background-size: cover;
+    // margin: 10px 0;
+    // margin-bottom: 20px;
+  }
+  .content {
+    height: 28.571%;
+    transition: 0.1s;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .course-info {
+      // padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      width: 90%;
+
+      .c-text {
+        color: rgba(255, 255, 255, 0.616);
+      }
+      .divider {
+        height: 35px;
+        width: 3px;
+        background-color: rgba(1, 16, 36, 0.752);
+      }
+    }
+    .footer-card {
+      width: 90%;
+
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .dec {
+        // width: 150px;
+        color: rgba(255, 255, 255, 0.616);
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .buttons {
+        z-index: 5;
+        display: flex;
+        .i-btn {
+          cursor: pointer;
+          color: rgba(0, 11, 26, 0.752);
+          font-size: 30px;
+          margin-left: 10px;
+          // transition: 0.1s;
+          transition: 0.2s linear;
+          &:hover {
+            // transition: 0.01s;
+            color: rgba(255, 255, 255, 0.277);
+          }
+          &:active {
+            color: rgba(10, 26, 47, 0.752);
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    // transition: 0.1s;
+    // transform: scale(0.95);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &:active {
+    transition: 0.1s;
+    transform: scale(0.95);
+  }
+}
+@media only screen and (max-width: 1580px) {
+  .all-course-div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 1270px) {
+  .all-course-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 965px) {
+  .all-course-div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

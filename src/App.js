@@ -4,6 +4,8 @@ import "./App.css";
 import AssingBatch from "./Components/Batch/AssingBatch/AssingBatch";
 import SeeAllBatch from "./Components/Batch/SeeAllBatch/SeeAllBatch";
 import UnAssignBatch from "./Components/Batch/UnAssignBatch/UnAssignBatch";
+import AddCourse from "./Components/Course/AddCourse/AddCourse";
+import SeeAllCourse from "./Components/Course/SeeAllCourse";
 
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
@@ -14,7 +16,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route path="" element={<UnAssignBatch />} />
+          <Route path="" element={<SeeAllCourse />} />
+          <Route path="/all/course" element={<SeeAllCourse />} />
+          <Route path="/add/course" element={<AddCourse />} />
+          <Route path="/add/course/:courseId" element={<AddCourse />} />
 
           <Route path="/add/to/batch" element={<UnAssignBatch />} />
           <Route path="/add/to/batch/:index" element={<AssingBatch />} />

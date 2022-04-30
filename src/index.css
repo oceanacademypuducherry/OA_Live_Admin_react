@@ -25,7 +25,9 @@
   background-color: rgba(169, 169, 169, 0.144);
   outline: none;
 }
-
+* {
+  scroll-behavior: smooth;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none !important;

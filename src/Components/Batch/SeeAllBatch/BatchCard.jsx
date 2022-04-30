@@ -3,6 +3,7 @@ import React from "react";
 import userImage from "../../images/user.jpg";
 import trainerImage from "../../images/mentor.jpg";
 import CustomButton from "../../common/CustomButton";
+import CircleProgressBar from "../../common/CircleProgressBar";
 
 export default function BatchCard() {
   return (
@@ -18,9 +19,11 @@ export default function BatchCard() {
         </div>
       </div>
       <div className="progress-div">
-        <div className="progres">
+        {/* <div className="progres">
           <div className="percent">75%</div>
-        </div>
+        </div> */}
+
+        <CircleProgressBar percentage={20 / 90} />
       </div>
 
       <div className="users-group">
@@ -42,7 +45,7 @@ export default function BatchCard() {
           </div>
         </div>
       </div>
-      <CustomButton style={{ width: "95%" }}> View Info</CustomButton>
+      {/* <CustomButton style={{ width: "95%" }}> View Info</CustomButton> */}
     </div>
   );
 }

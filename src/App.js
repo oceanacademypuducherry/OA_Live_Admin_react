@@ -6,6 +6,7 @@ import SeeAllBatch from "./Components/Batch/SeeAllBatch/SeeAllBatch";
 import UnAssignBatch from "./Components/Batch/UnAssignBatch/UnAssignBatch";
 import AddCourse from "./Components/Course/AddCourse/AddCourse";
 import SeeAllCourse from "./Components/Course/SeeAllCourse";
+import SeeAllOfflineCourse from "./Components/Course/SeeAllOfflineCourse";
 
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />}>
           <Route path="" element={<SeeAllCourse />} />
           <Route path="/all/course" element={<SeeAllCourse />} />
+          <Route path="/all/offlinecourse" element={<SeeAllOfflineCourse />} />
           <Route path="/add/course" element={<AddCourse />} />
           <Route path="/add/course/:courseId" element={<AddCourse />} />
 

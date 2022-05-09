@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 import CourseCard from "./CourseCard/CourseCard";
 import "./CourseCard/course_card.scss";
 
-export default function SeeAllCourse() {
+export default function SeeAllOfflineCourse() {
   const [allCourse, setAllCourse] = useState([]);
   const [useEffectRun, setUseEffectRun] = useState(true);
 
   useEffect(() => {
-    axios.get("/course").then((res) => {
+    axios.get("offlinecourse/").then((res) => {
       setAllCourse(res.data);
     });
   }, [useEffectRun]);
@@ -17,6 +17,7 @@ export default function SeeAllCourse() {
       {allCourse.map((course, index) => {
         return (
           <CourseCard
+            isOffline={true}
             key={index}
             course={course}
             useEffectRun={useEffectRun}

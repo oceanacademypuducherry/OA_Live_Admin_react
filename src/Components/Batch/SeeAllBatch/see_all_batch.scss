@@ -9,11 +9,12 @@
   @include centerAlign;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  place-items: center;
+  place-items: start center;
   row-gap: 10px;
   overflow: hidden;
   overflow-y: auto;
   .batch-card {
+    margin: 15px 0px;
     user-select: none;
     height: 380px;
     border-radius: 10px;

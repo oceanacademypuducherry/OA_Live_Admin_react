@@ -3,11 +3,12 @@ import TrainerCard from "../UserAndTrainerCard/TrainerCard";
 import UserCard from "../UserAndTrainerCard/UserCard";
 import CustomButton from "../../common/CustomButton";
 import "./assign_batch.scss";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "../../../index";
 
 export default function AssingBatch() {
   const [selectIndex, setSelectIndex] = useState(null);
+  const navigate = useNavigate();
   const locationHistoryState = useLocation().state;
   console.log(locationHistoryState);
 
@@ -40,6 +41,7 @@ export default function AssingBatch() {
       .post("/batch/add", batchData)
       .then((res) => {
         console.log(res.data);
+        navigate("/add/to/batch");
       })
       .catch((error) => {
         console.log(error.message);

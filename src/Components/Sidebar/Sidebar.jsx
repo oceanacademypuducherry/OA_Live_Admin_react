@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 export default function Sidebar() {
   const location = useLocation();
   let pathName = location.pathname;
-  console.log(location);
+
   return (
     <div className="sidebar-div">
       <Tabs
@@ -15,6 +15,12 @@ export default function Sidebar() {
         icon={<FaBook />}
         tabName={"See All Course"}
         activeTab={pathName === "/all/course" && "active-tab"}
+      />
+      <Tabs
+        navigateTo={"/all/offlinecourse"}
+        icon={<FaBook />}
+        tabName={"All Offline Course"}
+        activeTab={pathName === "/all/offlinecourse" && "active-tab"}
       />
       <Tabs
         navigateTo={"/add/course"}

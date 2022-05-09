@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./appbar.scss";
 import brandLogo from "../images/oa logo.svg";
-import adminImage from "../images/profile.gif";
+
 import { Link, useNavigate } from "react-router-dom";
 import axios from "../../index";
 
@@ -11,6 +11,7 @@ export default function Appbar() {
     mobileNumber: "",
     adminName: "",
     email: "",
+    adminImage: sessionStorage.getItem("userImg"),
   });
   function titleCase(str) {
     return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
@@ -26,6 +27,7 @@ export default function Appbar() {
       .post("admin/", { token: token })
       .then((res) => {
         setAdminInfo(res.data);
+        sessionStorage.setItem("userImg", res.data.adminImage);
       })
       .catch((e) => {
         console.log(e.message);
@@ -34,6 +36,7 @@ export default function Appbar() {
   }
   useEffect(() => {
     getAdminInfo();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="appbar-div">
@@ -44,7 +47,7 @@ export default function Appbar() {
         <div className="admin-name">{titleCase(adminInfo.adminName)}</div>
         <div className="pic-div">
           <div className="pic">
-            <img src={adminImage} alt="" />
+            <img src={adminInfo.adminImage} alt="" />
           </div>
         </div>
         <div className="admin-name logout" onClick={logout}>

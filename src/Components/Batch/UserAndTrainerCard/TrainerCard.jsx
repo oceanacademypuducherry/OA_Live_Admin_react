@@ -21,7 +21,7 @@ export default function TrainerCard({
       </div>
       <div className="divide-trainer-block">
         <div className="trainer-img-div">
-          <img src={mentorImg} alt="mentor" />
+          <img src={trainer.profilePicture} alt="mentor" />
         </div>
       </div>
       <div className="divide-trainer-block">

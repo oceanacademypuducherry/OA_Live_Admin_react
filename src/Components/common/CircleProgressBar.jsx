@@ -23,7 +23,7 @@ export default function CircleProgressBar({ percentage }) {
           stroke="#0E85AB"
           strokeWidth="5"
           fill="transparent"
-          strokeDasharray={`${300 * percentage} 500`}
+          strokeDasharray={`${350 * percentage} 500`}
           strokeDashoffset="49"
         />
       </svg>

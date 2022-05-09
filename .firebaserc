@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "oceanlivereact"
+  },
+  "targets": {
+    "oceanlivereact": {
+      "hosting": {
+        "admin": [
+          "oa-live-admin"
+        ]
+      }
+    }
+  }
+}

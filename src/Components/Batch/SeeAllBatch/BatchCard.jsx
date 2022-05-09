@@ -1,21 +1,25 @@
 import React from "react";
 
 import userImage from "../../images/user.jpg";
-import trainerImage from "../../images/mentor.jpg";
-import CustomButton from "../../common/CustomButton";
+// import trainerImage from "../../images/mentor.jpg";
+
 import CircleProgressBar from "../../common/CircleProgressBar";
 
-export default function BatchCard() {
+export default function BatchCard({ batch }) {
+  console.log(batch);
+  const { trainer, completedSyllabus, users, syllabus } = batch;
+  const percentage = completedSyllabus.length / syllabus.length;
+
   return (
     <div className="batch-card">
-      <div className="batch-name">28-Feb-1998-flutter</div>
+      <div className="batch-name">{batch.batchName}</div>
       <div className="trainer-info">
         <div className="profileImage">
-          <img src={trainerImage} alt="" />
+          <img src={trainer.profilePicture} alt="" />
         </div>
         <div className="t-about">
-          <div className="name">Ijass</div>
-          <div className="email">ijass@gmail.com</div>
+          <div className="name">{trainer.trainerName}</div>
+          <div className="email">{trainer.email}</div>
         </div>
       </div>
       <div className="progress-div">
@@ -23,27 +27,19 @@ export default function BatchCard() {
           <div className="percent">75%</div>
         </div> */}
 
-        <CircleProgressBar percentage={20 / 90} />
+        <CircleProgressBar percentage={percentage ? percentage : 0} />
       </div>
 
       <div className="users-group">
-        <div className="overlap">
-          <div className="user">
-            <img src={userImage} alt="user" />
-          </div>
-        </div>
-
-        <div className="overlap">
-          <div className="user">
-            <img src={userImage} alt="user" />
-          </div>
-        </div>
-
-        <div className="overlap">
-          <div className="user">
-            <img src={userImage} alt="user" />
-          </div>
-        </div>
+        {users.map((user, index) => {
+          return (
+            <div key={index} className="overlap">
+              <div className="user">
+                <img src={user.profilePicture} alt="user" />
+              </div>
+            </div>
+          );
+        })}
       </div>
       {/* <CustomButton style={{ width: "95%" }}> View Info</CustomButton> */}
     </div>

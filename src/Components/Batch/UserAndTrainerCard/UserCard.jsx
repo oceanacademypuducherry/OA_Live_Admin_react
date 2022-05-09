@@ -5,7 +5,7 @@ export default function UserCard({ userData, style }) {
   return (
     <div className="user-card-div " style={style}>
       <div className="user-img">
-        <img src={userPic} alt="user" />
+        <img src={userData.profilePicture} alt="user" />
       </div>
 
       <div className="user-info">

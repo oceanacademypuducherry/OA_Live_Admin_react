@@ -5,7 +5,12 @@ import { MdDelete } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import axios from "../../../index";
 
-export default function CourseCard({ course, useEffectRun, setUseEffectRun }) {
+export default function CourseCard({
+  course,
+  useEffectRun,
+  setUseEffectRun,
+  isOffline,
+}) {
   const navigate = useNavigate();
 
   function deleteCourse() {
@@ -19,6 +24,32 @@ export default function CourseCard({ course, useEffectRun, setUseEffectRun }) {
         console.log(error);
       });
   }
+  function deleteOfflineCourse() {
+    console.log(course._id);
+    console.log(localStorage.getItem("token"));
+    axios
+      .post("/offlinecourse/delete", {
+        docId: course._id,
+      })
+      .then((res) => {
+        console.log(res.data);
+        setUseEffectRun(!useEffectRun);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  function onlineUpdate() {
+    navigate("/add/course/" + course.courseId, {
+      state: { isOffline: false },
+    });
+  }
+  function offlineUpdate() {
+    navigate("/add/course/" + course.courseId, {
+      state: { isOffline: true },
+    });
+  }
+
   useEffect(() => {}, []);
   return (
     <div className="card-div">
@@ -29,21 +60,26 @@ export default function CourseCard({ course, useEffectRun, setUseEffectRun }) {
       <div className="content">
         <div className="course-info">
           <div className="c-text">{course.courseId}</div>
-          <div className="divider"></div>
-          <div className="c-text">{course.duration} Hrs</div>
-          <div className="divider"></div>
-          <div className="c-text">₹{course.price}</div>
+          {!isOffline && (
+            <>
+              <div className="divider"></div>
+              <div className="c-text">{course.duration} Hrs</div>
+              <div className="divider"></div>
+              <div className="c-text">₹{course.price}</div>
+            </>
+          )}
         </div>
         <div className="footer-card">
           <p className="dec">{course.description}</p>
           <div className="buttons">
             <RiEdit2Fill
               className="i-btn"
-              onClick={() => {
-                navigate("/add/course/" + course.courseId);
-              }}
+              onClick={isOffline ? offlineUpdate : onlineUpdate}
             />
-            <MdDelete className="i-btn" onClick={deleteCourse} />
+            <MdDelete
+              className="i-btn"
+              onClick={isOffline ? deleteOfflineCourse : deleteCourse}
+            />
           </div>
         </div>
       </div>

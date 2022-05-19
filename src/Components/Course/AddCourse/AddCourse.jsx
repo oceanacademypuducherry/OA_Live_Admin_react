@@ -28,7 +28,7 @@ export default function AddCourse() {
     description: "",
     syllabus: [],
     syllabusLink: "",
-    token: localStorage.getItem("token"),
+    token: localStorage.getItem("a_token"),
   });
   async function syllabusUpload(pickedFile) {
     var reader = new FileReader();
@@ -55,16 +55,11 @@ export default function AddCourse() {
 
   function onChangeHandler(e) {
     const { value, name, type, files } = e.target;
-    // setCourseInfo({ ...courseInfo, [name]: value });
-    // console.log(name);
     if (type === "file" && name === "courseImage") {
       setCourseInfo({ ...courseInfo, courseImage: null });
       uploadImage(files[0], "courseImage", name);
     } else if (type === "file" && name === "syllabus") {
-      // setCourseInfo({ ...courseInfo, syllabus: ["convert the json file"] });
       syllabusUpload(files[0]);
-      // console.log(files[0]);
-      // uploadImage(files[0], "onlineSyllabus", name);
     } else if (type === "file" && name === "syllabusLink") {
       setCourseInfo({ ...courseInfo, syllabusLink: null });
       uploadImage(files[0], "offlineSyllabus", name);
@@ -92,20 +87,12 @@ export default function AddCourse() {
             file: progress.toFixed(0) + "%",
           });
         }
-
-        // console.log("Upload is " + progress + "% done");
-        // console.log(snapshot.state);
       },
       (error) => {
         console.log(error);
-        // Handle unsuccessful uploads
       },
       () => {
-        // Handle successful uploads on complete
-        // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          // console.log("File available at", downloadURL);
-
           setCourseInfo({ ...courseInfo, [fieldName]: downloadURL });
         });
       }
@@ -121,7 +108,7 @@ export default function AddCourse() {
       duration: parseInt(courseInfo.duration),
       description: courseInfo.description,
       syllabus: courseInfo.syllabus,
-      token: localStorage.getItem("token"),
+      token: localStorage.getItem("a_token"),
     };
     axios
       .post("/course/add/course", bodyData)
@@ -142,7 +129,7 @@ export default function AddCourse() {
       courseName: courseInfo.courseName,
       description: courseInfo.description,
       syllabusLink: courseInfo.syllabusLink,
-      token: localStorage.getItem("token"),
+      token: localStorage.getItem("a_token"),
     };
     axios
       .post("/offlinecourse/add/", bodyData)
@@ -164,7 +151,7 @@ export default function AddCourse() {
       duration: parseInt(courseInfo.duration),
       description: courseInfo.description,
       syllabus: courseInfo.syllabus,
-      token: localStorage.getItem("token"),
+      token: localStorage.getItem("a_token"),
     };
     console.log(bodyData);
     axios
@@ -185,7 +172,7 @@ export default function AddCourse() {
       courseName: courseInfo.courseName,
       description: courseInfo.description,
       syllabusLink: courseInfo.syllabusLink,
-      token: localStorage.getItem("token"),
+      token: localStorage.getItem("a_token"),
     };
     axios
       .put("/offlinecourse/update", bodyData)

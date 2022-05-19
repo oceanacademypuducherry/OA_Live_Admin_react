@@ -22,6 +22,7 @@ export default function AssingBatch() {
     let batchData = {
       batchName: `${pickedDate}_${locationHistoryState.course.courseName}`,
       courseId: data.course.courseId,
+      course: data.course._id,
       users: data.users,
       courseProgress: 0,
       courseStartDate: startDate,
@@ -34,7 +35,7 @@ export default function AssingBatch() {
       batchType: data.batchType,
       isComplete: false,
       isStarted: true,
-      token: localStorage.getItem("token"),
+      token: localStorage.getItem("a_token"),
     };
     console.log(batchData);
     axios

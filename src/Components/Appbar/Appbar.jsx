@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "../../index";
 
 export default function Appbar() {
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("a_token");
   const [adminInfo, setAdminInfo] = useState({
     mobileNumber: "",
     adminName: "",

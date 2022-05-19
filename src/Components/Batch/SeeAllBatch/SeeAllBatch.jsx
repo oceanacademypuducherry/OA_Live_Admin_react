@@ -8,7 +8,7 @@ export default function SeeAllBatch() {
 
   function getAllBatch() {
     axios
-      .post("batch/all", { token: localStorage.getItem("token") })
+      .post("batch/all", { token: localStorage.getItem("a_token") })
       .then((res) => {
         setAllBatch(res.data);
       })

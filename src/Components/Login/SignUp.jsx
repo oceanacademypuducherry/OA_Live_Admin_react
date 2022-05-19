@@ -39,7 +39,7 @@ export default function SignUp() {
     axios
       .post("admin/create", adminInfo)
       .then((res) => {
-        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("a_token", res.data.token);
         navigate("/all/course");
       })
       .catch((e) => {

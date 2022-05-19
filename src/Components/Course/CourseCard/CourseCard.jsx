@@ -26,7 +26,7 @@ export default function CourseCard({
   }
   function deleteOfflineCourse() {
     console.log(course._id);
-    console.log(localStorage.getItem("token"));
+    console.log(localStorage.getItem("a_token"));
     axios
       .post("/offlinecourse/delete", {
         docId: course._id,

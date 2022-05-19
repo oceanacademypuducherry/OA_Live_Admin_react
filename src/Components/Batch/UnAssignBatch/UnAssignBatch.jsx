@@ -3,7 +3,7 @@ import UnAssignBatchCard from "./UnAssignBatchCard";
 import axios from "../../../index";
 
 export default function UnAssignBatch() {
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("a_token");
   const [purchaseData, setPurchaseData] = useState(null);
 
   function getPurchaseData() {

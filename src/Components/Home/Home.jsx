@@ -8,7 +8,7 @@ import "./home.scss";
 
 export default function Home() {
   const navigate = useNavigate();
-  const session = localStorage.getItem("token");
+  const session = localStorage.getItem("a_token");
 
   useEffect(() => {
     if (session === null || session === "undefined") navigate("/login");

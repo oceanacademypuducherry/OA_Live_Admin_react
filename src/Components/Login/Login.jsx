@@ -17,7 +17,7 @@ export default function Login() {
         mobileNumber: mobileNumber,
       })
       .then((res) => {
-        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("a_token", res.data.token);
         navigate("/");
       })
       .catch((error) => {

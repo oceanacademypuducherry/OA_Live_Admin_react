@@ -62,7 +62,7 @@ export default function SignUp() {
       (snapshot) => {
         const progress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        setUploadPercent(progress + "%");
+        setUploadPercent(progress.toFixed(0) + "%");
         // console.log("Upload is " + progress.toFixed(0) + "% done");
         // console.log(snapshot.state);
       },

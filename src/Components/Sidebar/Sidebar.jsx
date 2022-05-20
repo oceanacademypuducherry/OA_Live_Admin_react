@@ -14,7 +14,9 @@ export default function Sidebar() {
         navigateTo={"/all/course"}
         icon={<FaBook />}
         tabName={"See All Course"}
-        activeTab={pathName === "/all/course" && "active-tab"}
+        activeTab={
+          (pathName === "/all/course" || pathName === "/") && "active-tab"
+        }
       />
       <Tabs
         navigateTo={"/all/offlinecourse"}
@@ -37,8 +39,7 @@ export default function Sidebar() {
         tabName={"Un Assign Batch"}
         activeTab={
           (pathName === "/add/to/batch" ||
-            pathName === "/add/to/batch/assign" ||
-            pathName === "/") &&
+            pathName === "/add/to/batch/assign") &&
           "active-tab"
         }
       />

@@ -1,20 +1,34 @@
-.percent {
-  position: relative;
-  svg {
-    position: absolute;
-    transform: rotateZ(-90deg);
-    circle {
-      transition: 1s;
-    }
-  }
-}
-
-.percent:after {
-  height: 140px;
-  width: 140px;
+.progres-div {
+  height: 150px;
+  width: 150px;
+  min-height: 150px;
+  min-width: 150px;
+  margin: 15px 0;
+  background: conic-gradient(
+    #018bdb 0deg,
+    #018bdb 90deg,
+    #464646 0deg,
+    #464646 0deg
+  );
   display: flex;
   justify-content: center;
   align-items: center;
-  content: attr(data-pct) "%";
-  color: white;
+  border-radius: 50%;
+
+  &::after {
+    content: attr(progress-value) "%";
+    height: 85%;
+    width: 85%;
+    border-radius: 50%;
+
+    background: #0c1925;
+    background: #060e15;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+  }
 }

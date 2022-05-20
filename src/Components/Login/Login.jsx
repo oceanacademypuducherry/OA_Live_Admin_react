@@ -6,6 +6,8 @@ import TextInput from "../common/TextInput";
 import CustomButton from "../common/CustomButton";
 import { useNavigate } from "react-router-dom";
 import axios from "../../index";
+// import oaLgo from "../images/oa logo.svg";
+import oaLgo from "./oa.svg";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -29,6 +31,10 @@ export default function Login() {
   return (
     <div className="auth-div">
       <div className="box">
+        <div className="oa-logo">
+          <img src={oaLgo} alt="" height={70} />
+          <span>Admin</span>
+        </div>
         <TextInput
           type={"number"}
           value={mobileNumber}

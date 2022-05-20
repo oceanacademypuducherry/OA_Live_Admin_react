@@ -17,7 +17,21 @@
     background: $whiteOverlay;
     @include centerAlign;
     flex-direction: column;
-
+    position: relative;
+    .oa-logo {
+      top: -50%;
+      position: absolute;
+      font-size: 40px;
+      color: rgb(202, 220, 243);
+      font-weight: 600;
+      font-family: "Ubuntu";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        transform: translateX(-10px);
+      }
+    }
     .profile {
       user-select: none;
       backdrop-filter: blur(20px);

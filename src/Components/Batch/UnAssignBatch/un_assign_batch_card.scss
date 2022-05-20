@@ -51,6 +51,9 @@
       .title {
         font-size: 25px;
         color: #87a0ae;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .ico {
         color: rgba(255, 255, 255, 0.103);
@@ -63,6 +66,7 @@
       padding: 8px 10px;
       background: rgba(255, 255, 255, 0.082);
       border-radius: $elementRadius;
+      // color: #0781c8;
       color: #87a0ae;
       font-size: 18px;
     }

@@ -46,6 +46,7 @@ export default function AssingBatch() {
       })
       .catch((error) => {
         console.log(error.message);
+        alert("somthing went wrong");
       });
   }
 

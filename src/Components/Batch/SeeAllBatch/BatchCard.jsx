@@ -7,8 +7,7 @@ import CircleProgressBar from "../../common/CircleProgressBar";
 
 export default function BatchCard({ batch }) {
   console.log(batch);
-  const { trainer, completedSyllabus, users, syllabus } = batch;
-  const percentage = completedSyllabus.length / syllabus.length;
+  const { trainer, users, courseProgress } = batch;
 
   return (
     <div className="batch-card">
@@ -27,7 +26,7 @@ export default function BatchCard({ batch }) {
           <div className="percent">75%</div>
         </div> */}
 
-        <CircleProgressBar percentage={percentage ? percentage : 0} />
+        <CircleProgressBar percentage={courseProgress ? courseProgress : 0} />
       </div>
 
       <div className="users-group">

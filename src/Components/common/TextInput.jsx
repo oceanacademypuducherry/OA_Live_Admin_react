@@ -7,13 +7,16 @@ export default function TextInput({
   value,
   onchange,
   placeholder,
-  valid,
+  style,
   type,
   name,
   readOnly,
 }) {
   return (
-    <div className={`text-box ${className} ${textarea && "inp-textarea"} `}>
+    <div
+      className={`text-box ${className} ${textarea && "inp-textarea"} `}
+      style={style}
+    >
       <div className="dot"></div>
       {textarea ? (
         <textarea

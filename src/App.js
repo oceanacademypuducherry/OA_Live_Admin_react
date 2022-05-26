@@ -11,6 +11,8 @@ import SeeAllOfflineCourse from "./Components/Course/SeeAllOfflineCourse";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/Login/SignUp";
+import AddMentor from "./Components/Wbinar/AddMentor/AddMentor";
+import AddWebinar from "./Components/Wbinar/AddWebinar/AddWebinar";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/add/to/batch" element={<UnAssignBatch />} />
           <Route path="/add/to/batch/:index" element={<AssingBatch />} />
           <Route path="/all/batch" element={<SeeAllBatch />} />
+          <Route path="/add/mentor" element={<AddMentor />} />
+          <Route path="/add/webinar" element={<AddWebinar />} />
         </Route>
 
         <Route path="/login" element={<Login />} />

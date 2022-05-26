@@ -49,6 +49,18 @@ export default function Sidebar() {
         tabName={"See All Batches"}
         activeTab={pathName === "/all/batch" && "active-tab"}
       />
+      <Tabs
+        navigateTo={"/add/mentor"}
+        icon={<FaBook />}
+        tabName={"Add Mentor"}
+        activeTab={pathName === "/add/mentor" && "active-tab"}
+      />
+      <Tabs
+        navigateTo={"/add/webinar"}
+        icon={<FaBook />}
+        tabName={"Add Webinar"}
+        activeTab={pathName === "/add/webinar" && "active-tab"}
+      />
     </div>
   );
 }

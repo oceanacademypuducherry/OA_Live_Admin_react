@@ -1,0 +1,109 @@
+@import "../../common/colors.scss";
+
+.add-webinar-div {
+  position: relative;
+  height: calc(100% - 35px);
+  width: calc(100% - 35px);
+  background: #ffffff10;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  align-items: center;
+  .webinar-form-div {
+    height: 100%;
+    width: calc(100% - 400px);
+    // background: rgba(142, 91, 91, 0.296);
+    border-radius: 15px;
+    .files-div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      .asset {
+        position: relative;
+        height: 150px;
+        width: 250px;
+        margin: 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        overflow: hidden;
+        background: #ffffff0e;
+      }
+      .banner-div {
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .video-div {
+        height: 150px;
+        width: 250px;
+
+        margin: 15px;
+        video {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .inputs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      overflow-wrap: break-word;
+    }
+  }
+  .topic-div {
+    border-radius: 15px;
+    height: 100%;
+    width: 380px;
+    background: rgba(0, 0, 0, 0.296);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    position: relative;
+    .topic-title {
+      position: absolute;
+      top: 20px;
+      font-size: 20px;
+      color: white;
+    }
+    .topics {
+      position: absolute;
+      bottom: 10px;
+      height: calc(100% - 80px);
+      width: 93%;
+      overflow: hidden;
+      overflow-y: auto;
+      .topic {
+        height: 50px;
+        width: 100%;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.759);
+        font-size: 18px;
+        color: rgb(208, 218, 237);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 15px;
+        margin-top: 10px;
+      }
+    }
+  }
+  .addmentor {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

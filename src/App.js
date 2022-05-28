@@ -13,6 +13,7 @@ import Login from "./Components/Login/Login";
 import SignUp from "./Components/Login/SignUp";
 import AddMentor from "./Components/Wbinar/AddMentor/AddMentor";
 import AddWebinar from "./Components/Wbinar/AddWebinar/AddWebinar";
+import AllWebinar from "./Components/Wbinar/AllWebinar/AllWebinar";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/all/batch" element={<SeeAllBatch />} />
           <Route path="/add/mentor" element={<AddMentor />} />
           <Route path="/add/webinar" element={<AddWebinar />} />
+          <Route path="/all/webinar" element={<AllWebinar />} />
         </Route>
 
         <Route path="/login" element={<Login />} />

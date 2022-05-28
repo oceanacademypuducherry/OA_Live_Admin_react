@@ -23,7 +23,7 @@ export default function AddWebinar() {
     isFree: true,
     isComplete: false,
     price: 0,
-    topics: [{ title: "ti", subtitle: "sub" }],
+    topics: [],
     startAt: "",
     mentor: "",
     promoVideo: "",

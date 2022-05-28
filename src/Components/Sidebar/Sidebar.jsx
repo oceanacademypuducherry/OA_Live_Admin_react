@@ -61,6 +61,12 @@ export default function Sidebar() {
         tabName={"Add Webinar"}
         activeTab={pathName === "/add/webinar" && "active-tab"}
       />
+      <Tabs
+        navigateTo={"/all/webinar"}
+        icon={<FaBook />}
+        tabName={"All Webinar"}
+        activeTab={pathName === "/all/webinar" && "active-tab"}
+      />
     </div>
   );
 }

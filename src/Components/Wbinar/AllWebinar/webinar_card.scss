@@ -1,0 +1,99 @@
+.w-d {
+  height: 95%;
+  width: 95%;
+}
+.webinar-card {
+  cursor: pointer;
+  background: hsla(0, 0%, 100%, 0.05);
+  border-radius: 10px;
+  display: inline-flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  margin: 15px;
+  &:hover {
+    background: hsla(0, 0%, 100%, 0.03);
+  }
+  &:active {
+    transition: 0.1s;
+    transform: scale(0.95);
+  }
+  .card-leading {
+    height: 100px;
+    width: 100px;
+    background: #0978b6;
+    border-radius: inherit;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    .date {
+      font-size: 45px;
+      line-height: 40px;
+      font-weight: 500;
+    }
+    .day {
+      font-weight: 500;
+    }
+  }
+  .card-body {
+    height: 100px;
+    width: 250px;
+    padding: 5px 0;
+    display: inline-block;
+    margin-left: 10px;
+    .top-c {
+      height: 60%;
+      display: flex;
+      .title-c {
+        height: 100%;
+        width: 75%;
+        .title {
+          margin: 0;
+          font-size: 1.2rem;
+
+          color: #b2cbda;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .mentor {
+          margin: 0;
+          font-size: 0.95rem;
+          color: #415a68;
+        }
+      }
+      .icon-c {
+        height: 100%;
+        width: 25%;
+        .ico {
+          height: 50px;
+          width: 50px;
+          background: #ffffff0d;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 22px;
+          color: #415a68;
+        }
+      }
+    }
+    .bottom-c {
+      height: 40%;
+      width: 95%;
+      background: #ffffff0d;
+      margin: 4px 0;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px;
+      align-items: center;
+      font-weight: 600;
+      color: #415a68;
+    }
+  }
+}

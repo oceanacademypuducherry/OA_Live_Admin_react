@@ -253,6 +253,13 @@ export default function AddWebinar() {
             {webinarInfo.isComplete ? "Completed" : "Not Completed"}
           </button>
         </div>
+        <div
+          className="c-btn addmentor"
+          style={{ width: 300 }}
+          onClick={addWebinar}
+        >
+          Add Webinar
+        </div>
       </div>
       <div className="topic-div" onClick={() => filePick("topics-json")}>
         <input
@@ -269,13 +276,6 @@ export default function AddWebinar() {
             </span>
           ))}
         </div>
-      </div>
-      <div
-        className="c-btn addmentor"
-        style={{ width: 300 }}
-        onClick={addWebinar}
-      >
-        Add Mentor
       </div>
     </div>
   );

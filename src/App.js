@@ -14,6 +14,7 @@ import SignUp from "./Components/Login/SignUp";
 import AddMentor from "./Components/Wbinar/AddMentor/AddMentor";
 import AddWebinar from "./Components/Wbinar/AddWebinar/AddWebinar";
 import AllWebinar from "./Components/Wbinar/AllWebinar/AllWebinar";
+import WebinarInfo from "./Components/Wbinar/WebinarInfo/WebinarInfo";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/add/mentor" element={<AddMentor />} />
           <Route path="/add/webinar" element={<AddWebinar />} />
           <Route path="/all/webinar" element={<AllWebinar />} />
+          <Route path="/webinar/info" element={<WebinarInfo />} />
         </Route>
 
         <Route path="/login" element={<Login />} />

@@ -1,0 +1,109 @@
+.webinar-info {
+  height: 96%;
+  width: 98%;
+  display: flex;
+  .content {
+    height: 100%;
+    width: 70%;
+    display: inline-flex;
+
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    .infos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .banner-img {
+        height: 300px;
+        width: 550px;
+        background-color: #ffffff0c;
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .title {
+        margin: 15px 0;
+        font-size: 30px;
+        color: #ffffff;
+      }
+      .description {
+        font-size: 20px;
+        text-align: justify;
+        color: #5a798b;
+      }
+    }
+    .complete-btn {
+      padding: 10px 20px;
+      background: #0b91dd;
+      border-radius: 5px;
+      font-size: 22px;
+      color: white;
+      cursor: pointer;
+      transition: 0.1s;
+      &:active {
+        transition: 0.1s;
+        transform: scale(0.95);
+      }
+    }
+  }
+  .user-info-div {
+    height: 100%;
+    width: 30%;
+    display: inline-block;
+    background: #ffffff0a;
+    border-radius: 15px;
+    padding: 10px;
+    .user-info {
+      height: 90px;
+      width: 100%;
+      background: #0000005c;
+      border-radius: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .u-icon {
+        height: 60px;
+        width: 60px;
+        min-width: 60px;
+        min-height: 60px;
+        border-radius: 50%;
+        background: purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        span {
+          font-size: 30px;
+          color: white;
+        }
+      }
+      .w-user-info {
+        .name {
+          font-size: 25px;
+
+          color: white;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          width: calc(100% - 60px);
+        }
+        .sub {
+          color: #7a7d84;
+          font-size: 18px;
+          line-height: 23px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          width: calc(100% - 60px);
+        }
+      }
+    }
+  }
+}

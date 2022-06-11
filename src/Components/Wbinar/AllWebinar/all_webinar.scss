@@ -1,5 +1,10 @@
 .all-webinar-div {
-  height: 95%;
   width: 95%;
-  background: #ffffff0e;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  flex-wrap: wrap;
+  max-height: 100%;
+  overflow-y: auto;
 }

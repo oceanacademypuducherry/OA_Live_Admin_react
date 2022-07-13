@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import APIDocs from "./Components/API_Docs/API_Docs";
 
 import AssingBatch from "./Components/Batch/AssingBatch/AssingBatch";
 import SeeAllBatch from "./Components/Batch/SeeAllBatch/SeeAllBatch";
@@ -38,6 +39,7 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/apis" element={<APIDocs />} />
       </Routes>
     </BrowserRouter>
   );

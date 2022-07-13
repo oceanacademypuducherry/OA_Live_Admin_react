@@ -1,0 +1,1730 @@
+{
+  "info": {
+    "_postman_id": "6973ec54-660a-433f-9866-05af41327fd6",
+    "name": "OA Live",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Get All User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/user/all",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["user", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"thamizharasan\",\r\n    \"lastName\": \"hd\",\r\n    \"gender\": \"male\",\r\n    \"dateOfBirth\": \"28 Feb 1998 00:00:00 GMT\",\r\n    \"email\": \"thamizh@gmail.com\",\r\n    \"occupation\": \"student\",\r\n    \"instOrOrg\": \"OA\",\r\n    \"state\": \"pondicherry\",\r\n    \"country\": \"india\",\r\n    \"mobileNumber\": \"1234567890\",\r\n    \"profilePicture\": \"https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture.jpg\",\r\n    \"skills\": [\r\n        \"ps\",\r\n        \"js\"\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/user/create",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["user", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"thamizharasan\",\r\n    \"lastName\": \"hd\",\r\n    \"gender\": \"male\",\r\n    \"dateOfBirth\": \"28 Feb 1998 00:00:00 GMT\",\r\n    \"email\": \"hd@gmail.com\",\r\n    \"occupation\": \"student\",\r\n    \"instOrOrg\": \"OA\",\r\n    \"state\": \"pondicherry\",\r\n    \"country\": \"india\",\r\n    \"profilePicture\": \"https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture.jpg\",\r\n    \"skills\": [\r\n        \"ps\",\r\n        \"js\"\r\n    ],\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/user/",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["user", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login And Get Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mobileNumber\": \"8015122373\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/user/login",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["user", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete user",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/user",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["user"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Purchase",
+      "item": [
+        {
+          "name": "AllPurchase",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/purchased/all",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["purchased", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Purchase List with User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/purchased/",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["purchased", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Purchase details with purchase ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/purchased/details/<purcheseId>",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["purchased", "details", "<purcheseId>"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Purchase the Course with Course Id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"batchTime\": \"9-10\",\r\n    \"batchType\": \"week-days\",\r\n    \"query\": \"user quer optional\",\r\n    \"token\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/purchased/OCNPYTHON",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["purchased", "OCNPYTHON"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "make the Purchase to hasBatch condition",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"purchaseId\": \"624d5f483194e55c28955624\",\r\n    \"hasBatch\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/purchased/make/batch",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["purchased", "make", "batch"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Batch",
+      "item": [
+        {
+          "name": "get all batch",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/batch/all",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["batch", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Batch option",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/batch/options",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["batch", "options"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add batch",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n     \"batchName\": \"Custom Batch Name\",\r\n      \"courseId\": \"courseid\",\r\n      \"course\": \"courseObjectId\",\r\n      \"users\": [\"userid\"],\r\n      \"courseProgress\": 0,\r\n      \"courseStartDate\": \"2022-09-25T05:29:55.495Z\",\r\n      \"duration\":   90,\r\n      \"batchTime\": \"6-7\",\r\n      \"trainer\": \"trainerID\",\r\n      \"batchType\": \"week-end\",\r\n      \"isComplete\": false,\r\n      \"isStarted\": true,\r\n      \"token\": \"admin token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/batch/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["batch", "add"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "test delete batch",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/batch/deleteAll",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["batch", "deleteAll"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "test has batch false",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/batch/hasBatch",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["batch", "hasBatch"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "test delete schedule",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/batch/deleteSchedule",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["batch", "deleteSchedule"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Admin Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mobileNumber\": \"1234567890\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/admin/login",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["admin", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register Admin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mobileNumber\": \"1234567890\",\r\n    \"adminName\": \"admin name\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"adminImage\": \"imageurl\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/admin/login",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["admin", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Admin Home",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/admin/",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["admin", ""]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Trainer",
+      "item": [
+        {
+          "name": "Trainer Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mobileNumber\": \"8015122373\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/trainer/login",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["trainer", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create triner",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"trainerName\": \"Thamizhhd\",\r\n    \"designation\": \"full-stack Developer\",\r\n    \"skills\": [\r\n        \"node\",\r\n        \"react\",\r\n        \"flutter\"\r\n    ],\r\n    \"email\": \"thamizh@gmail.com\",\r\n    \"mobileNumber\": \"8015122373\",\r\n    \"profilePicture\": \"https://i.ibb.co/c6PYWC1/profile-oil.png\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/trainer/create",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["trainer", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all triner",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/trainer",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["trainer"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update triner",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"trainerName\":\"Thamizhhd\"\r\n \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/trainer/<trainerID>",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["trainer", "<trainerID>"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get loged trainer",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/trainer/get",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["trainer", "get"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete triner with id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/trainer/622ad434f8ae764d0f6e8844",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["trainer", "622ad434f8ae764d0f6e8844"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "availabale trainer",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"courseId\": \"OCNFLUTTER\",\r\n    \"batchTime\": \"7-8\",\r\n    \"batchType\": \"week-days\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/trainer/available/trainers",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["trainer", "available", "trainers"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Offline Course",
+      "item": [
+        {
+          "name": "get all offline course",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/offlinecourse/",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["offlinecourse", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all offline course with id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/offlinecourse/get/OCNANDR",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["offlinecourse", "get", "OCNANDR"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add offline Course",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"courseId\": \"teeee\",\r\n    \"courseImage\": \"url\",\r\n    \"courseName\": \"teeee\",\r\n    \"description\": \"course description\",\r\n    \"syllabusLink\": \"pdflink\",\r\n    \"token\": \"admin token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/offlinecourse/add",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["offlinecourse", "add"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update offline course",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n \r\n    \"courseId\": \"OCNTESTING\",\r\n    \"courseName\": \"tg\",\r\n    \"description\": \"course description\",\r\n    \"token\": \"admin token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/offlinecourse/update",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["offlinecourse", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete offlinec course",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"docId\": \"627627961ba6bce30c5b0b89\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/offlinecourse/delete",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["offlinecourse", "delete"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Offline course downloaded user",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/offlinecourse/get/all/users",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["offlinecourse", "get", "all", "users"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Schedule",
+      "item": [
+        {
+          "name": "Get trainer batch",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"trainser token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/schedule/batch",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["schedule", "batch"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "schedule the batch",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"batchId\": \"627a7d5a6b8e3c048db48bea\",\r\n    \"courseId\": \"OCNSQL\",\r\n    \"trainer\": \"623d9af502e042923fc6f0eb\",\r\n    \"zoomLink\":\"zoomLink url\",\r\n    \"topicIndex\":[0,1],\r\n    \"topic\":\"if else\",\r\n    \"isJoin\":false,\r\n    \"batchType\": \"week-days\",\r\n    \"batchTime\": \"1-2\",\r\n    \"recordedVideo\":\"\",\r\n    \"classDate\": \"2022-05-10T14:22:37.917Z\",\r\n    \"users\": [\r\n        \"623d964c02e042923fc6f0b2\",\r\n        \"623da1e4100d290d9b343811\"\r\n    ],\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/schedule/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["schedule", "add"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user Schedule",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/schedule/view/OCNANDR",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["schedule", "view", "OCNANDR"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Trainer schedule list",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/schedule/all",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["schedule", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "IsJoin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \r\n   \"token\": \"token\",\r\n   \"scheduleId\":\"624d7a5c95fca1f5fee08efe\",\r\n   \"isJoin\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/schedule/isJoin",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["schedule", "isJoin"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "isCompleted",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \r\n   \"token\": \"token\",\r\n   \"scheduleId\":\"624d7a5c95fca1f5fee08efe\",\r\n   \"isCompleted\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/schedule/isCompleted",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["schedule", "isCompleted"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Schedule the batch",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"oceanacademypuducherry@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/zoom/meeting",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["zoom", "meeting"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "SubscribedUser",
+      "item": [
+        {
+          "name": "Get all Subscribed User",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/subscribed/user/",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["subscribed", "user", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all Subscribed User Copy",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"thamizhhd@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/subscribed/user/add",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["subscribed", "user", "add"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "DownloadedOflineCourse",
+      "item": [
+        {
+          "name": "Get Downloade Offline Course User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/downloaded/course",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["downloaded", "course"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Downloade Offline Course User delete",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\":\"628c5a26b8dd69deb23cfca2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/downloaded/course/delete/user/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["downloaded", "course", "delete", "user", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Downloade Offline Course User Copy",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"courseId\":\"test\",\r\n    \"name\":\"ocean\",\r\n    \"mobileNumber\":\"1234567890\",\r\n    \"email\":\"oa@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/downloaded/course/add/user/",
+              "protocol": "https",
+              "host": ["oa-live-api", "herokuapp", "com"],
+              "path": ["downloaded", "course", "add", "user", ""]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Enquiry",
+      "item": [
+        {
+          "name": "Alert Enquiry",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Kayal\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"mobileNumber\": \"8015122373\",\r\n    \"selectedCoruse\": \"Python\",\r\n    \"description\": \"\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/enquiry",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["enquiry"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "All Enquiry",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Kayal\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"mobileNumber\": \"8015122373\",\r\n    \"selectedCoruse\": \"Python\",\r\n    \"description\": \"\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/enquiry/all",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["enquiry", "all"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payment",
+      "item": [
+        {
+          "name": "order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"amount\": 200\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/payment/order",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["payment", "order"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "checkout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"order_id\": \"order_JeWaw7CQwATN4I\",\r\n    \"currency\": \"INR\",\r\n    \"amount\": 200\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/payment/checkout",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["payment", "checkout"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Online Course",
+      "item": [
+        {
+          "name": "Get All Course",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/course/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["course", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Course",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/course/OCNANDR",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["course", "OCNANDR"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add a Course",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"courseId\": \"teeee\",\r\n    \"courseImage\": \"url\",\r\n    \"courseName\": \"teeee\",\r\n    \"price\": 1500,\r\n    \"duration\": 90,\r\n    \"description\": \"course description\",\r\n    \"syllabus\": [],\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/course/add/course",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["course", "add", "course"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Course",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"courseId\": \"OCNPY\",\r\n    \"courseName\": \"python\",\r\n    \"price\": 2500\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/course/OCNPY",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["course", "OCNPY"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Course",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/course/OCNPY",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["course", "OCNPY"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "webinar",
+      "item": [
+        {
+          "name": "all wbinar",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all webinar mentor",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/mentor/all",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "mentor", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add webinar mentor",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mentorName\": \"KKK\",\r\n    \"designation\": \"admin\",\r\n    \"mentorImage\": \"url\",\r\n    \"aboutMentor\": \"test\",\r\n    \"mentorEmail\": \"manisha@gmaiil.com\",\r\n    \"mobileNumber\": \"1234567890\",\r\n    \"token\": \"token\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/mentor/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "mentor", "add"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add webinar",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"KK webinar title\",\r\n  \"subtitle\": \"webinar subtitle for ben\",\r\n  \"bannerImage\": \"https://cms.uni-konstanz.de/fileadmin/archive/informatik-saupe/fileadmin/informatik/ag-saupe/Webpages/lehre/dip_w0910/pictures/frymire.png\",\r\n  \"course\": \"course\",\r\n  \"enrolledCount\": 100,\r\n  \"duration\": 60,\r\n  \"isFree\": true,\r\n  \"isComplete\":false,\r\n  \"price\": 0,\r\n  \"topics\": [],\r\n  \"startAt\": \"2022-09-25T05:29:55.495Z\",\r\n  \"mentor\": \"624fc34e6b2fadbcaa11ef7c\",\r\n  \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "add"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete webinar",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"webinarId\":\"62a6ebc023dcc0069e9b783a\",\r\n  \"token\":\"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/delete",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "delete"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete webinar all",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/delete/all",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "delete", "all"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all webinar upcoming",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/upcoming/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "upcoming", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all completd webinar",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"token\": \"token\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/completed/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "completed", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get webinar upcoming  with id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/upcoming/<webinarID>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "upcoming", "<webinarID>"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add webinar user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\":\"devika\",\r\n    \"email\":\"devika@gmaiil.com\",\r\n    \"mobileNumber\":\"9345050414\",\r\n    \"webinar\":\"62b566142201f94a98f72194\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/user/add",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "user", "add"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get webinar users with webinar id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/users/<webinar id>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "users", "<webinar id>"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "userJoin With id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/user/join/<webinarUserID>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "user", "join", "<webinarUserID>"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "mentor Join With webinar id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/mentor/join/<mentorID>",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "mentor", "join", "<mentorID>"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "make complete webinar",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"isComplete\":false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/completed/6253c3b6442597d84a7dd583",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "completed", "6253c3b6442597d84a7dd583"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "notification webinar",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/notification",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", "notification"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Common",
+      "item": [
+        {
+          "name": "Add mentor",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mentorName\": \"Anusuya Balakrishnan\",\r\n    \"profilePicture\": \"https://i.ibb.co/MnCVz85/anusuya.png\",\r\n    \"designation\": \"Developer / Trainer\",\r\n    \"gmail\": \"link\",\r\n    \"facebook\": \"link\",\r\n    \"linkedIn\": \"link\",\r\n    \"twitter\": \"link\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/webinar/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["webinar", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get mentor",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "token",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://oa-live-api.herokuapp.com/mentor",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["mentor"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

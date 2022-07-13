@@ -1,0 +1,165 @@
+.api {
+  display: flex;
+
+  .api-tabs-div {
+    box-sizing: border-box;
+    background: rgb(225, 224, 224);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 350px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: auto;
+    .section-api {
+      position: relative;
+      .module {
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(249, 244, 244);
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        cursor: pointer;
+
+        p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding-right: 5px;
+          color: #3f3f3f;
+          font-weight: bold;
+        }
+        span {
+          color: #3f3f3f;
+        }
+      }
+      .api-link {
+        position: relative;
+        height: 0px;
+        cursor: pointer;
+        overflow: hidden;
+        top: -10px;
+        transition: 0.3s;
+        padding-left: 30px;
+
+        .api-title {
+          width: 250px;
+          background: rgb(255, 255, 255);
+          height: 40px;
+          border-radius: 5px;
+          border-left: 8px solid;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+          color: #3f3f3f;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 600;
+          margin: 8px;
+          .title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .api-method {
+            padding: 5px 15px;
+            font-size: 15px;
+            background-color: red;
+            border-radius: 4px;
+            color: white;
+          }
+          .GET {
+            background-color: #32b046;
+          }
+          .POST {
+            background-color: #e09b33;
+          }
+          .PATCH,
+          .PUT {
+            background-color: #82817f;
+          }
+          .DELETE {
+            background-color: #ef4c4c;
+          }
+        }
+        .GET {
+          border-color: #32b046;
+        }
+        .POST {
+          border-color: #e09b33;
+        }
+        .PATCH,
+        .PUT {
+          border-color: #82817f;
+        }
+        .DELETE {
+          border-color: #ef4c4c;
+        }
+      }
+      .isOpen {
+        height: 100px;
+        overflow-y: hidden;
+      }
+    }
+  }
+  .body-of-api {
+    padding: 50px;
+    width: calc(100vw - 350px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .url-bar-div {
+      width: 75%;
+      height: 50px;
+      background-color: #e2e2e2;
+      display: flex;
+      align-items: center;
+      border-radius: 7px;
+      overflow: hidden;
+      .method-btn {
+        height: 100%;
+        width: 100px;
+        // background: #3f3f3f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        color: white;
+        border-radius: 5px;
+      }
+      .GET {
+        background-color: #32b046;
+      }
+      .POST {
+        background-color: #e09b33;
+      }
+      .PATCH,
+      .PUT {
+        background-color: #82817f;
+      }
+      .DELETE {
+        background-color: #ef4c4c;
+      }
+    }
+
+    .body-contents {
+      margin-top: 25px;
+      overflow: hidden;
+      background: rgb(230, 230, 230);
+      width: 100%;
+      border-radius: 8px;
+      padding: 10px;
+      .body-lable {
+        padding: 10px;
+        background: rgb(198, 198, 198);
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

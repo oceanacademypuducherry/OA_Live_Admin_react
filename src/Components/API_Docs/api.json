@@ -991,7 +991,7 @@
         {
           "name": "Get Downloade Offline Course User delete",
           "request": {
-            "method": "DELETE",
+            "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",

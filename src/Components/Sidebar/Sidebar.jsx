@@ -67,6 +67,14 @@ export default function Sidebar() {
         tabName={"All Webinar"}
         activeTab={pathName === "/all/webinar" && "active-tab"}
       />
+      <Tabs
+        navigateTo={"/offline/course/downloaded/user"}
+        icon={<FaBook />}
+        tabName={"Downloaded User"}
+        activeTab={
+          pathName === "/offline/course/downloaded/user" && "active-tab"
+        }
+      />
     </div>
   );
 }

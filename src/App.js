@@ -12,6 +12,7 @@ import SeeAllOfflineCourse from "./Components/Course/SeeAllOfflineCourse";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/Login/SignUp";
+import OfflineCourseDownloadedUser from "./Components/OfflineCourseDownloadedUser/OfflineCourseDownloadedUser";
 import AddMentor from "./Components/Wbinar/AddMentor/AddMentor";
 import AddWebinar from "./Components/Wbinar/AddWebinar/AddWebinar";
 import AllWebinar from "./Components/Wbinar/AllWebinar/AllWebinar";
@@ -35,6 +36,10 @@ function App() {
           <Route path="/add/webinar" element={<AddWebinar />} />
           <Route path="/all/webinar" element={<AllWebinar />} />
           <Route path="/webinar/info" element={<WebinarInfo />} />
+          <Route
+            path="/offline/course/downloaded/user"
+            element={<OfflineCourseDownloadedUser />}
+          />
         </Route>
 
         <Route path="/login" element={<Login />} />

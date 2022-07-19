@@ -1,0 +1,43 @@
+.ocdu-div {
+  display: flex;
+
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  overflow-y: auto;
+  justify-content: center;
+}
+
+.dcc-div {
+  position: relative;
+  height: 150px;
+  width: 350px;
+  background-color: #0000005c;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+
+  .field {
+    height: 100%;
+    display: flex;
+    .value {
+      font-size: 14px;
+      color: #ffffffbe;
+    }
+  }
+  .ico-trash {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(247, 82, 82);
+  }
+}

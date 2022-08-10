@@ -6,8 +6,10 @@ import webinarVideo from "./webinar.mp4";
 import firebaseStorage from "../../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import axios from "../../../index";
+import { useNavigate } from "react-router-dom";
 
 export default function AddWebinar() {
+  const navigate = useNavigate();
   const [percent, setPercent] = useState({
     bannerImage: "upload image",
     promoVideo: "upload video",
@@ -42,6 +44,8 @@ export default function AddWebinar() {
     } else if (type === "datetime-local") {
       console.log(value);
       let date = new Date(value).toISOString();
+      let tcs = new Date(value).toUTCString();
+      console.log(tcs);
       console.log(date);
       setWbinarInfo({ ...webinarInfo, [name]: date });
     } else {
@@ -126,6 +130,7 @@ export default function AddWebinar() {
       .post("/webinar/add", webinarInfo)
       .then((res) => {
         console.log(res.data);
+        navigate("/all/webinar");
       })
       .catch((error) => {
         console.log(error);

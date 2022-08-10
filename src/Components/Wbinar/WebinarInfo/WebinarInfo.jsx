@@ -10,7 +10,6 @@ export default function WebinarInfo() {
   const [webinarUsers, setWebinarUses] = useState([]);
 
   function getWebinarUser() {
-    console.log(state.webinar._id);
     axios
       .get("/webinar/users/" + state.webinar._id)
       .then((res) => {
@@ -34,6 +33,23 @@ export default function WebinarInfo() {
         console.log(error);
       });
   }
+  function deleteWbinar() {
+    console.log(webinar._id);
+
+    axios
+      .post("/webinar/delete/", {
+        webinarId: webinar._id,
+        token: localStorage.a_token,
+      })
+      .then((res) => {
+        console.log("meke delete successfully...");
+        navigate("/all/webinar");
+        // setWebinarUses(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   useEffect(() => {
     getWebinarUser();
@@ -49,14 +65,25 @@ export default function WebinarInfo() {
           <div className="title">{webinar.title}</div>
           <div className="description">{webinar.subtitle}</div>
         </div>
-        <div
-          className="complete-btn"
-          style={{ background: state.webinar.isComplete ? "green" : "#0b91dd" }}
-          onClick={() => {
-            makeCompleted(!state.webinar.isComplete);
-          }}
-        >
-          {state.webinar.isComplete ? "Make Available" : "Make Completed"}
+        <div className="btns">
+          <div
+            className="complete-btn"
+            style={{
+              background: state.webinar.isComplete ? "green" : "#0b91dd",
+            }}
+            onClick={() => {
+              makeCompleted(!state.webinar.isComplete);
+            }}
+          >
+            {state.webinar.isComplete ? "Make Available" : "Make Completed"}
+          </div>
+          <button
+            className="complete-btn"
+            style={{ background: "red" }}
+            onClick={deleteWbinar}
+          >
+            Delete
+          </button>
         </div>
       </div>
       <div className="user-info-div">

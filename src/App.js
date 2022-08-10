@@ -18,35 +18,46 @@ import AddWebinar from "./Components/Wbinar/AddWebinar/AddWebinar";
 import AllWebinar from "./Components/Wbinar/AllWebinar/AllWebinar";
 import WebinarInfo from "./Components/Wbinar/WebinarInfo/WebinarInfo";
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import AddMCQ from "./Components/MCQ/AddMCQ";
+
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="" element={<SeeAllCourse />} />
-          <Route path="/all/course" element={<SeeAllCourse />} />
-          <Route path="/all/offlinecourse" element={<SeeAllOfflineCourse />} />
-          <Route path="/add/course" element={<AddCourse />} />
-          <Route path="/add/course/:courseId" element={<AddCourse />} />
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}>
+            <Route path="" element={<SeeAllCourse />} />
+            <Route path="/all/course" element={<SeeAllCourse />} />
+            <Route
+              path="/all/offlinecourse"
+              element={<SeeAllOfflineCourse />}
+            />
+            <Route path="/add/course" element={<AddCourse />} />
+            <Route path="/add/course/:courseId" element={<AddCourse />} />
 
-          <Route path="/add/to/batch" element={<UnAssignBatch />} />
-          <Route path="/add/to/batch/:index" element={<AssingBatch />} />
-          <Route path="/all/batch" element={<SeeAllBatch />} />
-          <Route path="/add/mentor" element={<AddMentor />} />
-          <Route path="/add/webinar" element={<AddWebinar />} />
-          <Route path="/all/webinar" element={<AllWebinar />} />
-          <Route path="/webinar/info" element={<WebinarInfo />} />
-          <Route
-            path="/offline/course/downloaded/user"
-            element={<OfflineCourseDownloadedUser />}
-          />
-        </Route>
+            <Route path="/add/to/batch" element={<UnAssignBatch />} />
+            <Route path="/add/to/batch/:index" element={<AssingBatch />} />
+            <Route path="/all/batch" element={<SeeAllBatch />} />
+            <Route path="/add/mentor" element={<AddMentor />} />
+            <Route path="/add/webinar" element={<AddWebinar />} />
+            <Route path="/all/webinar" element={<AllWebinar />} />
+            <Route path="/webinar/info" element={<WebinarInfo />} />
+            <Route path="/add/mcq" element={<AddMCQ />} />
+            <Route
+              path="/offline/course/downloaded/user"
+              element={<OfflineCourseDownloadedUser />}
+            />
+          </Route>
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/apis" element={<APIDocs />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/apis" element={<APIDocs />} />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 

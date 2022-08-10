@@ -75,6 +75,12 @@ export default function Sidebar() {
           pathName === "/offline/course/downloaded/user" && "active-tab"
         }
       />
+      <Tabs
+        navigateTo={"/add/mcq"}
+        icon={<FaBook />}
+        tabName={"Add MCQ"}
+        activeTab={pathName === "/add/mcq" && "active-tab"}
+      />
     </div>
   );
 }

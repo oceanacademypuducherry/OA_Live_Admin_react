@@ -1,0 +1,44 @@
+.drop-div {
+  position: relative;
+  width: 200px;
+  .lable-div {
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    cursor: pointer;
+    .value {
+      font-size: 18px;
+    }
+  }
+  .options-div {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+    top: 45px;
+    overflow: hidden;
+    transition: 0.2s;
+    .option {
+      //   background-color: gray;
+      height: 40px;
+      padding-left: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      //   border: 1px solid gray;
+      transition: 0.2s;
+      cursor: pointer;
+      &:hover {
+        background: rgb(228, 228, 228);
+      }
+    }
+    .default-option {
+      background-color: rgb(214, 214, 214);
+      color: rgb(44, 44, 44);
+    }
+  }
+}

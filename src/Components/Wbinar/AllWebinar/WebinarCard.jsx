@@ -22,7 +22,7 @@ export default function WebinarCard({ webinar }) {
   const navigate = useNavigate();
 
   const datime = new Date(webinar.startAt);
-  console.log(webinar.isComplete);
+
   const date = {
     date: datime.getDate(),
     month: datime.getMonth(),

@@ -39,17 +39,21 @@
         color: #5a798b;
       }
     }
-    .complete-btn {
-      padding: 10px 20px;
-      background: #0b91dd;
-      border-radius: 5px;
-      font-size: 22px;
-      color: white;
-      cursor: pointer;
-      transition: 0.1s;
-      &:active {
+    .btns {
+      display: flex;
+      .complete-btn {
+        margin: 10px;
+        padding: 10px 20px;
+        background: #0b91dd;
+        border-radius: 5px;
+        font-size: 22px;
+        color: white;
+        cursor: pointer;
         transition: 0.1s;
-        transform: scale(0.95);
+        &:active {
+          transition: 0.1s;
+          transform: scale(0.95);
+        }
       }
     }
   }

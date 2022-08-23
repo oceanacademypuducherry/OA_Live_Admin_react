@@ -29,6 +29,7 @@ export default function AddWebinar() {
     startAt: "",
     mentor: "",
     promoVideo: "",
+    linkDate: "",
     token: localStorage.getItem("a_token"),
   });
 
@@ -43,11 +44,12 @@ export default function AddWebinar() {
       }
     } else if (type === "datetime-local") {
       console.log(value);
-      let date = new Date(value).toISOString();
+      let date = new Date(value);
+      console.log(date);
       let tcs = new Date(value).toUTCString();
       console.log(tcs);
-      console.log(date);
-      setWbinarInfo({ ...webinarInfo, [name]: date });
+
+      setWbinarInfo({ ...webinarInfo, [name]: date, linkDate: value });
     } else {
       setWbinarInfo({ ...webinarInfo, [name]: value });
     }

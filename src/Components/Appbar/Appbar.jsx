@@ -4,9 +4,11 @@ import brandLogo from "../images/oa logo.svg";
 
 import { Link, useNavigate } from "react-router-dom";
 import axios from "../../index";
+import { useQuery, QueryClientProvider } from "@tanstack/react-query";
 
 export default function Appbar() {
   const token = localStorage.getItem("a_token");
+
   const [adminInfo, setAdminInfo] = useState({
     mobileNumber: "",
     adminName: "",
@@ -38,6 +40,7 @@ export default function Appbar() {
     getAdminInfo();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   return (
     <div className="appbar-div">
       <Link to={"/"} className="brand-logo">

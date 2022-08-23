@@ -1,0 +1,15 @@
+.all-q {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+
+  .drop {
+    height: 40px;
+    margin: 10px;
+    font-size: 18px;
+  }
+  .all-mcq-q {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

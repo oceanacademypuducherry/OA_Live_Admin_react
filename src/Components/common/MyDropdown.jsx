@@ -9,9 +9,10 @@ export default function MyDropdown({
   staticValue,
   staticValueClick,
   onChange,
+  lableText,
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedTitle, setSelectedTitle] = useState("select");
+  const [selectedTitle, setSelectedTitle] = useState(lableText);
 
   return (
     <div
@@ -35,7 +36,10 @@ export default function MyDropdown({
             <div
               className="option"
               key={index}
-              onClick={onChange.bind(this, value[index])}
+              onClick={() => {
+                onChange(value[index]);
+                setSelectedTitle(item);
+              }}
             >
               {item}
             </div>

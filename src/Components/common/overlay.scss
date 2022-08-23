@@ -1,0 +1,13 @@
+.overlay-div {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.335);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,6 +1,7 @@
 .drop-div {
   position: relative;
   width: 200px;
+  margin: 5px;
   .lable-div {
     height: 40px;
     background-color: white;
@@ -29,8 +30,9 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      //   border: 1px solid gray;
+      // border: 1px solid gray;
       transition: 0.2s;
+
       cursor: pointer;
       &:hover {
         background: rgb(228, 228, 228);

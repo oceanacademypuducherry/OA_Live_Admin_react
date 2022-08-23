@@ -20,6 +20,8 @@ import WebinarInfo from "./Components/Wbinar/WebinarInfo/WebinarInfo";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AddMCQ from "./Components/MCQ/AddMCQ";
+import MCQCollections from "./Components/MCQ/MCQCollections";
+import AllMCQs from "./Components/MCQ/AllMCQs";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +48,9 @@ function App() {
             <Route path="/all/webinar" element={<AllWebinar />} />
             <Route path="/webinar/info" element={<WebinarInfo />} />
             <Route path="/add/mcq" element={<AddMCQ />} />
+            <Route path="/mcq/collections" element={<MCQCollections />} />
+            <Route path="/all/mcq" element={<AllMCQs />} />
+
             <Route
               path="/offline/course/downloaded/user"
               element={<OfflineCourseDownloadedUser />}

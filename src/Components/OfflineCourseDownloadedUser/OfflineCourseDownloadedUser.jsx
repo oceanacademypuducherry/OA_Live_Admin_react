@@ -4,21 +4,21 @@ import { useEffect } from "react";
 import { useState } from "react";
 import DownloadedCourseCard from "./DownloadedCourseCard";
 import "./offline_course_downloaded_user.scss";
+import { useQuery } from "@tanstack/react-query";
+import { fetchData } from "../CommonFunctions/fetchData";
 
 export default function OfflineCourseDownloadedUser() {
   const [allUsers, setAllusers] = useState([]);
   const [runUseEffect, setRunUseEffect] = useState(true);
 
-  function getUserData() {
-    axios
-      .get("/downloaded/course")
-      .then((res) => {
-        setAllusers(res.data.reverse());
+  const { data, isError, isLoading, refetch } = useQuery(
+    ["alldownloaduser"],
+    () =>
+      fetchData({
+        apiUrl: "/downloaded/course",
+        method: "GET",
       })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+  );
 
   function deleteUser(user) {
     console.log(user._id);
@@ -32,19 +32,22 @@ export default function OfflineCourseDownloadedUser() {
       });
   }
   useEffect(() => {
-    getUserData();
+    refetch();
   }, [runUseEffect]);
   return (
     <div className="ocdu-div">
-      {allUsers.map((user, index) => {
-        return (
-          <DownloadedCourseCard
-            key={index}
-            user={user}
-            deleteUser={deleteUser}
-          />
-        );
-      })}
+      {isError && <h1>Error</h1>}
+      {isLoading && <h1>Loading</h1>}
+      {data &&
+        data.map((user, index) => {
+          return (
+            <DownloadedCourseCard
+              key={index}
+              user={user}
+              deleteUser={deleteUser}
+            />
+          );
+        })}
     </div>
   );
 }

@@ -17,6 +17,7 @@ export default function Home() {
     <div className="home-div">
       <div className="component-div">
         <Appbar />
+
         <div className="t-c">
           <Sidebar />
           <Content>

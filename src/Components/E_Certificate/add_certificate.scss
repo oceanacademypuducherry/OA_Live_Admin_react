@@ -1,0 +1,26 @@
+.upload-cert {
+  .img-div {
+    height: 240px;
+    width: 420px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .upload-btn {
+      padding: 8px 20px;
+      border: none;
+      font-size: 1.2em;
+      border-radius: 5px;
+      color: #383838;
+      cursor: pointer;
+    }
+    .certImg {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

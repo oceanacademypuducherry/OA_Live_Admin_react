@@ -50,6 +50,8 @@ function App() {
             <Route path="/add/mcq" element={<AddMCQ />} />
             <Route path="/mcq/collections" element={<MCQCollections />} />
             <Route path="/all/mcq" element={<AllMCQs />} />
+            <Route path="/add/certificate" element={<AddEertificate />} />
+            <Route path="/all/certificate" element={<AddEertificate />} />
 
             <Route
               path="/offline/course/downloaded/user"

@@ -1,0 +1,59 @@
+.cert-view {
+  width: 100%;
+  height: 100%;
+
+  .cert-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    max-height: 100%;
+    padding: 10px;
+    overflow-y: scroll;
+  }
+}
+.cert {
+  width: 250px;
+  height: 200px;
+  background-color: #ffffff26;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.09s;
+  padding: 10px;
+
+  .cert-div {
+    height: 150px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .cert-action {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+    .ico {
+      color: rgb(228, 90, 90);
+      font-size: 20px;
+      cursor: pointer;
+    }
+    p {
+      color: white;
+      font-weight: bold;
+    }
+  }
+  &:hover {
+    transform: rotateZ(5deg);
+  }
+}

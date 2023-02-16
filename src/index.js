@@ -6,7 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://oa-live-api.herokuapp.com/",
+  baseURL: "https://us-central1-oceanlivereact.cloudfunctions.net/app/",
+  // baseURL: "https://oa-live-api.herokuapp.com/",
   // baseURL: "http://localhost:5000/",
 });
 

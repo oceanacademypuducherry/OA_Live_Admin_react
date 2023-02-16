@@ -47,4 +47,12 @@ export const navList = [
     title: "All MCQ",
     url: "/all/mcq",
   },
+  {
+    title: "Add E-Certificate",
+    url: "/add/certificate",
+  },
+  {
+    title: "All Certificate",
+    url: "/all/certificate",
+  },
 ];

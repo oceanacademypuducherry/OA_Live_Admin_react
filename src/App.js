@@ -22,6 +22,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AddMCQ from "./Components/MCQ/AddMCQ";
 import MCQCollections from "./Components/MCQ/MCQCollections";
 import AllMCQs from "./Components/MCQ/AllMCQs";
+import AddEertificate from "./Components/E_Certificate/AddEertificate";
+import SeeAllCertificate from "./Components/E_Certificate/SeeAllCertificate";
 
 const queryClient = new QueryClient();
 
@@ -51,7 +53,7 @@ function App() {
             <Route path="/mcq/collections" element={<MCQCollections />} />
             <Route path="/all/mcq" element={<AllMCQs />} />
             <Route path="/add/certificate" element={<AddEertificate />} />
-            <Route path="/all/certificate" element={<AddEertificate />} />
+            <Route path="/all/certificate" element={<SeeAllCertificate />} />
 
             <Route
               path="/offline/course/downloaded/user"

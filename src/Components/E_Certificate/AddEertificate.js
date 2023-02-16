@@ -5,6 +5,7 @@ import { AiOutlineUpload } from "react-icons/ai";
 import CustomButton from "../common/CustomButton";
 import firebaseStorage from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import axios from "../../index";
 
 export default function AddEertificate() {
   const [uploadPercent, setUploadPercent] = useState({
@@ -12,7 +13,7 @@ export default function AddEertificate() {
   });
 
   const [certInfo, setCertInfo] = useState({
-    studentId: "",
+    studentId: "OCN",
     certificateUrl: "",
     token: localStorage.getItem("a_token"),
   });
@@ -57,6 +58,28 @@ export default function AddEertificate() {
       }
     );
   }
+
+  function onSubmit() {
+    axios
+      .post("/certificate/add", certInfo)
+      .then((res) => {
+        console.log(res.data);
+        setUploadPercent({});
+        setCertInfo({
+          studentId: "OCN",
+          certificateUrl: "",
+          token: localStorage.getItem("a_token"),
+        });
+        setUploadPercent({
+          ...uploadPercent,
+          file: "",
+        });
+      })
+      .catch((e) => {
+        alert("something went wrong please check Student ID");
+        console.log(e);
+      });
+  }
   return (
     <div className="upload-cert">
       <div className="img-div" onClick={imageFileUpload}>
@@ -79,13 +102,7 @@ export default function AddEertificate() {
         onchange={onChangeHandler}
         value={certInfo.studentId}
       />
-      <CustomButton
-        onClick={() => {
-          console.log(certInfo);
-        }}
-      >
-        Submit
-      </CustomButton>
+      <CustomButton onClick={onSubmit}>Submit</CustomButton>
     </div>
   );
 }

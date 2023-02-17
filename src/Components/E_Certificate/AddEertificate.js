@@ -13,7 +13,7 @@ export default function AddEertificate() {
   });
 
   const [certInfo, setCertInfo] = useState({
-    studentId: "OCN",
+    studentId: "OCNST",
     certificateUrl: "",
     token: localStorage.getItem("a_token"),
   });
@@ -66,7 +66,7 @@ export default function AddEertificate() {
         console.log(res.data);
         setUploadPercent({});
         setCertInfo({
-          studentId: "OCN",
+          studentId: "OCNST",
           certificateUrl: "",
           token: localStorage.getItem("a_token"),
         });

@@ -16,7 +16,7 @@
 }
 .cert {
   width: 250px;
-  height: 200px;
+  height: fit-content;
   background-color: #ffffff26;
   border-radius: 5px;
   overflow: hidden;
@@ -24,7 +24,9 @@
   padding: 10px;
 
   .cert-div {
-    height: 150px;
+    min-height: 150px;
+    max-height: 200px;
+    height: auto;
     width: 100%;
     background-color: white;
     border-radius: 5px;

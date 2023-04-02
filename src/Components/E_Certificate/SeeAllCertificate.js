@@ -27,6 +27,7 @@ export default function SeeAllCertificate() {
                 studentId={cert.studentId}
                 certificateUrl={cert.certificateUrl}
                 onDelete={refetch}
+                data={cert}
               />
             );
           })}

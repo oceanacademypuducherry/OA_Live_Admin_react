@@ -1,4 +1,6 @@
 .upload-cert {
+  position: relative;
+  max-width: 420px;
   .img-div {
     min-height: 250px;
     width: 420px;
@@ -21,6 +23,36 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+  }
+  .profile-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: rgb(168, 140, 140);
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px #00000017;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .cert-skils {
+    display: inline-block;
+    margin-block: 10px;
+    line-height: 50px;
+    span {
+      padding: 10px;
+      background: white;
+      border-radius: 3px;
+      margin-inline: 5px;
     }
   }
 }

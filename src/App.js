@@ -24,6 +24,7 @@ import MCQCollections from "./Components/MCQ/MCQCollections";
 import AllMCQs from "./Components/MCQ/AllMCQs";
 import AddEertificate from "./Components/E_Certificate/AddEertificate";
 import SeeAllCertificate from "./Components/E_Certificate/SeeAllCertificate";
+import AlertEnquiry from "./Components/AlertEnquiry/AlertEnquiry";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +55,7 @@ function App() {
             <Route path="/all/mcq" element={<AllMCQs />} />
             <Route path="/add/certificate" element={<AddEertificate />} />
             <Route path="/all/certificate" element={<SeeAllCertificate />} />
+            <Route path="/enquiry" element={<AlertEnquiry />} />
 
             <Route
               path="/offline/course/downloaded/user"

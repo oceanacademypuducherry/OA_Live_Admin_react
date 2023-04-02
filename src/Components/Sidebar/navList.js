@@ -55,4 +55,8 @@ export const navList = [
     title: "All Certificate",
     url: "/all/certificate",
   },
+  {
+    title: "Enquiry",
+    url: "/enquiry",
+  },
 ];

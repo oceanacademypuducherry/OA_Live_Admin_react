@@ -1,0 +1,18 @@
+.enq-cart-div {
+  min-width: 200px;
+  background: #ffffff86;
+  min-height: 100px;
+  max-width: 400px;
+  border-radius: 10px;
+  height: fit-content;
+  flex: 1;
+  padding-inline: 10px;
+  position: relative;
+  color: #000000d7;
+  .ico {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: rgb(146, 35, 35);
+  }
+}

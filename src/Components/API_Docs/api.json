@@ -14,7 +14,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/user/all",
+							"raw": "http://localhost:5000/user/all",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -44,7 +44,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/user/create",
+							"raw": "http://localhost:5000/user/create",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -74,7 +74,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/user/",
+							"raw": "http://localhost:5000/user/",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -104,7 +104,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/user/login",
+							"raw": "http://localhost:5000/user/login",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -134,7 +134,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/user",
+							"raw": "http://localhost:5000/user",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -171,7 +171,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/purchased/all",
+							"raw": "http://localhost:5000/purchased/all",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -201,7 +201,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/purchased/",
+							"raw": "http://localhost:5000/purchased/",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -234,7 +234,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/purchased/details/<purcheseId>",
+							"raw": "http://localhost:5000/purchased/details/<purcheseId>",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -265,7 +265,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/purchased/OCNPYTHON",
+							"raw": "http://localhost:5000/purchased/OCNPYTHON",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -295,7 +295,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/purchased/make/batch",
+							"raw": "http://localhost:5000/purchased/make/batch",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -418,7 +418,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/batch/deleteAll",
+							"raw": "http://localhost:5000/batch/deleteAll",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -448,7 +448,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/batch/hasBatch",
+							"raw": "http://localhost:5000/batch/hasBatch",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -478,7 +478,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/batch/deleteSchedule",
+							"raw": "http://localhost:5000/batch/deleteSchedule",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -513,7 +513,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/admin/login",
+							"raw": "http://localhost:5000/admin/login",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -543,7 +543,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/admin/login",
+							"raw": "http://localhost:5000/admin/login",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -573,7 +573,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/admin/",
+							"raw": "http://localhost:5000/admin/",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -608,7 +608,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/trainer/login",
+							"raw": "http://localhost:5000/trainer/login",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -638,7 +638,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/trainer/create",
+							"raw": "http://localhost:5000/trainer/create",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -659,7 +659,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/trainer",
+							"raw": "http://localhost:5000/trainer",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -688,7 +688,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/trainer/<trainerID>",
+							"raw": "http://localhost:5000/trainer/<trainerID>",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -796,7 +796,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/offlinecourse/",
+							"raw": "http://localhost:5000/offlinecourse/",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -817,7 +817,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/offlinecourse/get/OCNANDR",
+							"raw": "http://localhost:5000/offlinecourse/get/OCNANDR",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -848,7 +848,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/offlinecourse/add",
+							"raw": "http://localhost:5000/offlinecourse/add",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -878,7 +878,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/offlinecourse/update",
+							"raw": "http://localhost:5000/offlinecourse/update",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -908,7 +908,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/offlinecourse/delete",
+							"raw": "http://localhost:5000/offlinecourse/delete",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -941,7 +941,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/offlinecourse/get/all/users",
+							"raw": "http://localhost:5000/offlinecourse/get/all/users",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -1190,7 +1190,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/subscribed/user/",
+							"raw": "http://localhost:5000/subscribed/user/",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -1221,7 +1221,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/subscribed/user/add",
+							"raw": "http://localhost:5000/subscribed/user/add",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -1248,7 +1248,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/downloaded/course",
+							"raw": "http://localhost:5000/downloaded/course",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",
@@ -1310,7 +1310,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://oa-live-api.herokuapp.com/downloaded/course/add/user/",
+							"raw": "http://localhost:5000/downloaded/course/add/user/",
 							"protocol": "https",
 							"host": [
 								"oa-live-api",

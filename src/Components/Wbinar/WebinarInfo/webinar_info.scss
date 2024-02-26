@@ -50,6 +50,7 @@
         color: white;
         cursor: pointer;
         transition: 0.1s;
+
         &:active {
           transition: 0.1s;
           transform: scale(0.95);
@@ -64,6 +65,7 @@
     background: #ffffff0a;
     border-radius: 15px;
     padding: 10px;
+    overflow-y: auto;
     .user-info {
       height: 90px;
       width: 100%;
@@ -72,6 +74,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+
       .u-icon {
         height: 60px;
         width: 60px;
